@@ -53,7 +53,7 @@ export default function AboutPage() {
     <>
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <Breadcrumbs items={[{ label: "About" }]} />
-        <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+        <h1 className="mt-4 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-ink sm:text-5xl">
           About {business.name}
         </h1>
 
@@ -76,7 +76,7 @@ export default function AboutPage() {
         </div>
 
         <section aria-labelledby="focus" className="mt-14">
-          <h2 id="focus" className="text-3xl font-bold tracking-tight text-ink">
+          <h2 id="focus" className="font-[family-name:var(--font-display)] text-3xl font-bold tracking-tight text-ink">
             What we focus on
           </h2>
           <ul className="mt-6 grid max-w-3xl gap-3 sm:grid-cols-2">
@@ -98,7 +98,7 @@ export default function AboutPage() {
         </section>
 
         <section aria-labelledby="beliefs" className="mt-14">
-          <h2 id="beliefs" className="text-3xl font-bold tracking-tight text-ink">
+          <h2 id="beliefs" className="font-[family-name:var(--font-display)] text-3xl font-bold tracking-tight text-ink">
             What We Believe
           </h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">

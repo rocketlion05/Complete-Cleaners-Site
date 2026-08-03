@@ -86,7 +86,7 @@ export default function ServicesPage() {
     <>
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <Breadcrumbs items={[{ label: "Services" }]} />
-        <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+        <h1 className="mt-4 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-ink sm:text-5xl">
           Commercial Cleaning Services
         </h1>
         <p className="mt-5 max-w-2xl text-lg text-body">
@@ -106,9 +106,11 @@ export default function ServicesPage() {
             {routineServices.map((service) => (
               <article
                 key={service.title}
-                className="rounded-xl border border-line bg-paper p-6 sm:p-8"
+                className="rounded-2xl border border-line bg-paper p-6 transition-all hover:-translate-y-1 hover:border-ink/25 hover:shadow-md sm:p-8"
               >
-                <h3 className="text-xl font-bold text-ink">{service.title}</h3>
+                <h3 className="font-[family-name:var(--font-display)] text-xl font-bold text-ink">
+                  {service.title}
+                </h3>
                 <p className="mt-3 text-body">{service.body}</p>
               </article>
             ))}

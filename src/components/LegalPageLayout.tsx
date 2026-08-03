@@ -11,7 +11,7 @@ export function LegalPageLayout({ title, updated, children }: LegalPageLayoutPro
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
       <Breadcrumbs items={[{ label: title }]} />
-      <h1 className="mt-4 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+      <h1 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-bold tracking-tight text-ink sm:text-4xl">
         {title}
       </h1>
       <p className="mt-2 text-sm text-faint">Last updated: {updated}</p>

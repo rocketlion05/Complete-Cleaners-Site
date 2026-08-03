@@ -30,7 +30,7 @@ export default function ServiceAreaPage() {
     <>
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <Breadcrumbs items={[{ label: "Service Area" }]} />
-        <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+        <h1 className="mt-4 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-ink sm:text-5xl">
           Where We Work
         </h1>
 

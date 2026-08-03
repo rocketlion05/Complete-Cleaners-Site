@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Baloo_2, Manrope } from "next/font/google";
 import "./globals.css";
 import { business } from "@/config/business";
 import { Header } from "@/components/Header";
@@ -9,6 +9,14 @@ import { Analytics } from "@/components/Analytics";
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
+  display: "swap",
+});
+
+// Rounded display face that echoes the hand-drawn logo wordmark.
+const baloo = Baloo_2({
+  variable: "--font-baloo",
+  subsets: ["latin"],
+  weight: ["600", "700"],
   display: "swap",
 });
 
@@ -32,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} h-full antialiased`}>
+    <html lang="en" className={`${manrope.variable} ${baloo.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <a
           href="#main-content"

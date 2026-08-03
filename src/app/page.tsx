@@ -8,6 +8,8 @@ import { ProcessSteps } from "@/components/ProcessSteps";
 import { CtaSection } from "@/components/CtaSection";
 import { ButtonLink } from "@/components/ui/Button";
 import { LocalBusinessJsonLd } from "@/components/JsonLd";
+import { Sparkle } from "@/components/decor";
+import { serviceIcons, type ServiceIconName } from "@/components/service-icons";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -42,46 +44,56 @@ const audiences = [
   "Showrooms and selected commercial properties",
 ];
 
-const coreServices = [
+const coreServices: { title: string; text: string; icon: ServiceIconName }[] = [
   {
     title: "Trash removal and liner replacement",
     text: "Waste baskets emptied and relined on every visit.",
+    icon: "trash",
   },
   {
     title: "Vacuuming and carpet care",
     text: "Routine vacuuming of carpeted areas, entries, and mats.",
+    icon: "vacuum",
   },
   {
     title: "Hard-floor mopping",
     text: "Dust mopping and damp mopping for tile, vinyl, and similar floors.",
+    icon: "mop",
   },
   {
     title: "Restroom cleaning",
     text: "Fixtures, mirrors, partitions, and floors cleaned and disinfected.",
+    icon: "restroom",
   },
   {
     title: "Breakroom cleaning",
     text: "Counters, sinks, tables, and appliance exteriors wiped down.",
+    icon: "breakroom",
   },
   {
     title: "Dusting and surface wiping",
     text: "Desks, ledges, and common surfaces dusted on a set rotation.",
+    icon: "dusting",
   },
   {
     title: "Interior entry-glass cleaning",
     text: "Entry doors and interior glass kept free of smudges.",
+    icon: "glass",
   },
   {
     title: "Restroom-product restocking",
     text: "Customer-supplied paper products and soap restocked as needed.",
+    icon: "restock",
   },
   {
     title: "Recurring after-hours service",
     text: "Cleaning scheduled around your closing time, not during it.",
+    icon: "afterhours",
   },
   {
     title: "Customized building checklists",
     text: "A written scope of work specific to your property.",
+    icon: "checklist",
   },
 ];
 
@@ -119,13 +131,31 @@ export default function HomePage() {
     <>
       <LocalBusinessJsonLd />
       {/* Hero */}
-      <section className="border-b border-line bg-mist">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1fr_auto]">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
-              Dependable Commercial Cleaning in Fayetteville
+      <section className="relative overflow-hidden border-b border-line bg-mist">
+        <div aria-hidden="true" className="bg-dots absolute inset-0" />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1fr_auto]">
+          <div className="animate-rise max-w-2xl">
+            <h1 className="font-[family-name:var(--font-display)] text-4xl font-bold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-6xl">
+              Dependable Commercial Cleaning in{" "}
+              <span className="relative inline-block">
+                Fayetteville
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 120 12"
+                  fill="none"
+                  preserveAspectRatio="none"
+                  className="absolute -bottom-1.5 left-0 h-3 w-full text-sage"
+                >
+                  <path
+                    d="M3 8.5C22 4.5 55 3 117 5.5"
+                    stroke="currentColor"
+                    strokeWidth="5"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
             </h1>
-            <p className="mt-5 text-lg text-body sm:text-xl">
+            <p className="mt-6 text-lg text-body sm:text-xl">
               {business.name} provides consistent after-hours cleaning for
               offices and professional spaces throughout Fayetteville and
               Northwest Arkansas.
@@ -136,9 +166,29 @@ export default function HomePage() {
                 View Our Services
               </ButtonLink>
             </div>
-            <p className="mt-6 text-sm font-semibold text-faint">
-              Clear checklists. Reliable communication. Consistent results.
-            </p>
+            <ul className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-faint">
+              {[
+                "Clear checklists",
+                "Reliable communication",
+                "Consistent results",
+              ].map((point) => (
+                <li key={point} className="flex items-center gap-1.5">
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="size-4 text-sage"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                  {point}
+                </li>
+              ))}
+            </ul>
             {activeFlags.length > 0 ? (
               <ul className="mt-4 flex flex-wrap gap-2">
                 {activeFlags.map((flag) => (
@@ -152,8 +202,13 @@ export default function HomePage() {
               </ul>
             ) : null}
           </div>
-          <div className="hidden justify-center lg:flex">
-            <Logo size={220} priority className="drop-shadow-sm" />
+          <div className="animate-rise-delayed relative hidden justify-center lg:flex">
+            <Sparkle className="animate-float absolute -left-8 top-6 size-7 text-sage" />
+            <Sparkle className="animate-float absolute -right-6 top-24 size-5 text-ink/30 [animation-delay:1.2s]" />
+            <Sparkle className="animate-float absolute -bottom-2 left-2 size-4 text-sage/70 [animation-delay:2.4s]" />
+            <div className="rounded-full bg-paper p-10 shadow-sm ring-1 ring-line">
+              <Logo size={230} priority />
+            </div>
           </div>
         </div>
       </section>
@@ -201,7 +256,11 @@ export default function HomePage() {
           </SectionHeading>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {coreServices.map((service) => (
-              <ServiceCard key={service.title} title={service.title}>
+              <ServiceCard
+                key={service.title}
+                title={service.title}
+                icon={serviceIcons[service.icon]}
+              >
                 {service.text}
               </ServiceCard>
             ))}
@@ -246,7 +305,7 @@ export default function HomePage() {
       {business.flags.showTestimonials && business.testimonials.length > 0 ? (
         <section aria-labelledby="testimonials" className="border-y border-line bg-mist">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-            <h2 id="testimonials" className="text-3xl font-bold text-ink">
+            <h2 id="testimonials" className="font-[family-name:var(--font-display)] text-3xl font-bold text-ink">
               What customers say
             </h2>
             <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -285,7 +344,7 @@ export default function HomePage() {
       {/* Service guarantee */}
       <section aria-labelledby="guarantee" className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="rounded-xl border border-line bg-paper p-8 sm:p-10">
-          <h2 id="guarantee" className="text-2xl font-bold text-ink sm:text-3xl">
+          <h2 id="guarantee" className="font-[family-name:var(--font-display)] text-2xl font-bold text-ink sm:text-3xl">
             Our service guarantee
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-body">

@@ -30,7 +30,7 @@ export default function QuotePage() {
       <Breadcrumbs items={[{ label: "Request a Quote" }]} />
       <div className="mt-4 grid gap-12 lg:grid-cols-[2fr_1fr]">
         <div>
-          <h1 className="text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+          <h1 className="font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-ink sm:text-5xl">
             Request a Free Commercial Cleaning Walkthrough
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-body">
