@@ -1,10 +1,13 @@
 import Script from "next/script";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { business } from "@/config/business";
 
 /**
  * Optional analytics loaders. Nothing renders unless an analytics ID is
  * configured in src/config/business.ts or via environment variables.
  * See README.md ("Analytics") for setup instructions.
+ *
+ * Vercel Analytics is always enabled when deployed to Vercel.
  */
 export function Analytics() {
   const gaId =
@@ -38,6 +41,7 @@ export function Analytics() {
           strategy="afterInteractive"
         />
       ) : null}
+      <VercelAnalytics />
     </>
   );
 }
