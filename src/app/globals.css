@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  /* Complete Cleaners palette — mostly black and white with warm neutrals */
+  --color-ink: #171717;
+  --color-paper: #ffffff;
+  --color-mist: #f7f7f5;
+  --color-line: #e8e8e5;
+  --color-body: #444444;
+  --color-faint: #6b6b68;
+  /* Muted sage accent — used sparingly */
+  --color-sage: #5f7060;
+  --color-sage-light: #eef1ee;
+
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Shared visible focus style for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+  border-radius: 2px;
+}

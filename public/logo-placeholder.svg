@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Complete Cleaners logo placeholder">
+  <!--
+    PLACEHOLDER LOGO
+    Replace by adding your real logo at /public/complete-cleaners-logo.png
+    and updating `logoPath` in src/config/business.ts
+  -->
+  <rect x="4" y="4" width="232" height="232" rx="24" fill="#ffffff" stroke="#171717" stroke-width="6"/>
+  <!-- Simple smiling face -->
+  <circle cx="120" cy="94" r="46" fill="none" stroke="#171717" stroke-width="7"/>
+  <circle cx="104" cy="86" r="5" fill="#171717"/>
+  <circle cx="136" cy="86" r="5" fill="#171717"/>
+  <path d="M100 106 q20 16 40 0" fill="none" stroke="#171717" stroke-width="6" stroke-linecap="round"/>
+  <text x="120" y="176" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#171717">Complete</text>
+  <text x="120" y="202" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#171717">Cleaners</text>
+  <text x="120" y="224" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" letter-spacing="2" fill="#6b6b68">LOGO PLACEHOLDER</text>
+</svg>
