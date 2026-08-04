@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalPageLayout title="Terms of Use" updated="August 2026">
+    <LegalPageLayout title="Terms of Use" updated="August 4, 2026">
       <p>
         These terms govern your use of this website, operated by{" "}
         {business.legalName} (&ldquo;{business.name},&rdquo; &ldquo;we,&rdquo;
@@ -21,10 +21,10 @@ export default function TermsPage() {
       <section>
         <h2>Informational purpose</h2>
         <p>
-          The content on this website is provided for general information about
-          our services. While we work to keep it accurate, content may change
-          at any time without notice, and we do not guarantee that every detail
-          is current or error-free.
+          The content on this website is provided for general information
+          about our services. While we work to keep it accurate, content may
+          change at any time without notice, and we do not guarantee that
+          every detail is current or error-free.
         </p>
       </section>
 
@@ -33,9 +33,18 @@ export default function TermsPage() {
         <p>
           Submitting a quote request, receiving a proposal, or corresponding
           with us does not create a service agreement. Service begins only
-          after a written agreement is signed by both parties. We may decline
-          any request, and we do not guarantee that every property is within
-          our service area.
+          after a separate written agreement is signed by both parties. We may
+          decline any request, and we do not guarantee that every property is
+          within our service area.
+        </p>
+      </section>
+
+      <section>
+        <h2>Customer reviews</h2>
+        <p>
+          Nothing in these terms restricts you from posting or sharing an
+          honest review of our services, positive or negative, on any
+          platform.
         </p>
       </section>
 
@@ -43,8 +52,8 @@ export default function TermsPage() {
         <h2>Intellectual property</h2>
         <p>
           The website&apos;s content, including text, graphics, and the{" "}
-          {business.name} name and logo, belongs to {business.legalName} or its
-          licensors. You may not reuse it for commercial purposes without
+          {business.name} name and logo, belongs to {business.legalName} or
+          its licensors. You may not reuse it for commercial purposes without
           written permission.
         </p>
       </section>
@@ -53,18 +62,30 @@ export default function TermsPage() {
         <h2>Limitation of liability</h2>
         <p>
           To the fullest extent permitted by law, {business.legalName} is not
-          liable for damages arising from your use of this website or reliance
-          on its content. The website is provided &ldquo;as is&rdquo; without
-          warranties of any kind.
+          liable for damages arising from your use of this website or
+          reliance on its content. The website is provided &ldquo;as
+          is&rdquo; without warranties of any kind. These terms apply to the
+          website only; any cleaning services we provide are governed by the
+          separate written service agreement for those services.
         </p>
       </section>
 
       <section>
-        <h2>Governing law</h2>
+        <h2>Governing law and venue</h2>
         <p>
           These terms are governed by the laws of the State of Arkansas,
-          without regard to conflict-of-law principles. [Placeholder: confirm
-          venue and governing-law language with counsel before launch.]
+          without regard to conflict-of-law principles. Any dispute arising
+          from use of this website will be brought in the state or federal
+          courts located in Washington County, Arkansas.
+        </p>
+      </section>
+
+      <section>
+        <h2>Changes to these terms</h2>
+        <p>
+          We may update these terms from time to time. Changes take effect
+          when posted on this page, and the date at the top of this page
+          shows the most recent revision.
         </p>
       </section>
 
@@ -88,11 +109,6 @@ export default function TermsPage() {
           .
         </p>
       </section>
-
-      <p className="rounded-lg bg-mist p-4 text-sm">
-        Note: These terms are a starting point prepared before launch and
-        should be professionally reviewed before the website goes live.
-      </p>
     </LegalPageLayout>
   );
 }
