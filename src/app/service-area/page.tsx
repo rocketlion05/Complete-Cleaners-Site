@@ -72,7 +72,7 @@ export default function ServiceAreaPage() {
                 )}
               </ul>
               <p className="mt-4 text-body">
-                Being listed here is not a guarantee of service — availability
+                Being listed here is not a guarantee of service. Availability
                 for properties outside Fayetteville is confirmed during the
                 quote process.
               </p>

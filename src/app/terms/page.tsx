@@ -42,8 +42,8 @@ export default function TermsPage() {
       <section>
         <h2>Intellectual property</h2>
         <p>
-          The website&apos;s content — including text, graphics, and the{" "}
-          {business.name} name and logo — belongs to {business.legalName} or its
+          The website&apos;s content, including text, graphics, and the{" "}
+          {business.name} name and logo, belongs to {business.legalName} or its
           licensors. You may not reuse it for commercial purposes without
           written permission.
         </p>

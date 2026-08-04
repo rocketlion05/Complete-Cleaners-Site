@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const beliefs = [
   {
     title: "Reliability matters",
-    body: "Showing up as scheduled, every time, is the baseline — not the goal.",
+    body: "Showing up as scheduled, every time, is the baseline, not the goal.",
   },
   {
     title: "Details matter",
@@ -64,7 +64,7 @@ export default function AboutPage() {
             clear expectations, and responsive communication.
           </p>
           <p>
-            Too many offices deal with cleaning service that drifts — visits
+            Too many offices deal with cleaning service that drifts: visits
             that get shorter over time, tasks that quietly disappear, and
             concerns that go unanswered. Our answer is structure: every property
             gets a written scope of work, and every visit follows it.

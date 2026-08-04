@@ -8,7 +8,7 @@ export default function NotFound() {
     <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-24 sm:px-6 lg:grid-cols-[1fr_auto]">
       <div className="flex flex-col items-start">
         <p className="text-sm font-bold uppercase tracking-wide text-faint">
-          404 — Page not found
+          404: Page not found
         </p>
         <h1 className="mt-3 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-ink sm:text-5xl">
           Well, this page got swept away

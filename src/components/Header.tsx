@@ -18,7 +18,7 @@ export function Header() {
         <Link
           href="/"
           className="flex items-center gap-2.5 font-bold text-ink"
-          aria-label={`${business.name} — home`}
+          aria-label={`${business.name} home`}
         >
           <Logo size={36} priority />
           <span className="text-lg leading-tight">{business.name}</span>

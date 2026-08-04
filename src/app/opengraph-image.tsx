@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { business } from "@/config/business";
 
-export const alt = `${business.name} — Commercial Cleaning in Fayetteville, AR`;
+export const alt = `${business.name} | Commercial Cleaning in Fayetteville, AR`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

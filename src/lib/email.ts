@@ -158,7 +158,7 @@ export async function sendQuoteEmails(fields: QuoteFields): Promise<boolean> {
     process.env.FORM_RECIPIENT_EMAIL ?? business.formRecipientEmail;
 
   const rows = (Object.keys(FIELD_LABELS) as (keyof QuoteFields)[]).map(
-    (key) => ({ label: FIELD_LABELS[key], value: fields[key] || "—" })
+    (key) => ({ label: FIELD_LABELS[key], value: fields[key] || "(not provided)" })
   );
 
   const notificationText = [
@@ -217,7 +217,7 @@ export async function sendQuoteEmails(fields: QuoteFields): Promise<boolean> {
 
   const delivered = await sendEmail({
     to: recipient,
-    subject: `Walkthrough request — ${fields.businessName} (${fields.city})`,
+    subject: `New walkthrough request: ${fields.businessName} (${fields.city})`,
     text: notificationText,
     html: notificationHtml,
     replyTo: fields.email,
@@ -228,7 +228,7 @@ export async function sendQuoteEmails(fields: QuoteFields): Promise<boolean> {
     try {
       await sendEmail({
         to: fields.email,
-        subject: `We received your walkthrough request — ${business.name}`,
+        subject: `${business.name} received your walkthrough request`,
         text: confirmationText,
         html: confirmationHtml,
       });

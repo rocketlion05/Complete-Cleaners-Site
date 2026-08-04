@@ -26,7 +26,7 @@ export function FormSuccess() {
       </div>
       <h2 className="text-2xl font-bold text-ink">Request received</h2>
       <p className="mt-3 max-w-prose text-body">
-        Thanks — your walkthrough request is on its way. We will follow up to
+        Thank you! Your walkthrough request is on its way. We will follow up to
         confirm a time to visit your property. If you would rather talk now,
         call{" "}
         <a

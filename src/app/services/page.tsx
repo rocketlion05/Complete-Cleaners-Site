@@ -32,7 +32,7 @@ const routineServices = [
   },
   {
     title: "Restroom Cleaning",
-    body: "Restrooms are cleaned and disinfected on every visit — toilets, urinals, sinks, mirrors, partitions, and floors. High-touch points such as door handles and dispensers get regular attention.",
+    body: "Restrooms are cleaned and disinfected on every visit: toilets, urinals, sinks, mirrors, partitions, and floors. High-touch points such as door handles and dispensers get regular attention.",
   },
   {
     title: "Floor and Carpet Maintenance",
@@ -52,7 +52,7 @@ const routineServices = [
   },
   {
     title: "Supply Restocking",
-    body: "Customer-supplied restroom and breakroom products — paper towels, tissue, and soap — are restocked as part of routine visits so dispensers never sit empty.",
+    body: "Customer-supplied restroom and breakroom products such as paper towels, tissue, and soap are restocked as part of routine visits so dispensers never sit empty.",
   },
   {
     title: "Initial Deep Cleaning",
@@ -152,10 +152,18 @@ export default function ServicesPage() {
           </SectionHeading>
           <ul className="mt-6 grid max-w-3xl gap-2 sm:grid-cols-2">
             {exclusions.map((item) => (
-              <li key={item} className="flex items-start gap-2 text-body">
-                <span aria-hidden="true" className="mt-1 text-faint">
-                  –
-                </span>
+              <li key={item} className="flex items-start gap-2.5 text-body">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  className="mt-1 size-4 shrink-0 text-faint"
+                >
+                  <path d="M6 6l12 12M18 6L6 18" />
+                </svg>
                 {item}
               </li>
             ))}

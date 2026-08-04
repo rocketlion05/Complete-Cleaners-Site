@@ -335,8 +335,9 @@ export default function HomePage() {
           </div>
           <p className="mt-8 max-w-2xl text-body">
             Quotes are based on factors such as property size, service
-            frequency, flooring, restroom count, access, and requested tasks —
-            so your price reflects your building, not a one-size-fits-all rate.
+            frequency, flooring, restroom count, access, and requested tasks,
+            so your price reflects your building rather than a
+            one-size-fits-all rate.
           </p>
         </div>
       </section>

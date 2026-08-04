@@ -78,7 +78,7 @@ export default function PrivacyPage() {
         <p>
           Submitting the quote form sends your request to our business email and
           may trigger a confirmation email to the address you provide. We use
-          your email address to respond to your inquiry — not to add you to
+          your email address to respond to your inquiry, not to add you to
           marketing lists.
         </p>
       </section>
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
           We take reasonable steps to protect the information you send us, but
           no website or email system can be guaranteed to be completely secure.
           Please do not submit sensitive personal information through this
-          website — the quote form does not need it, and we do not ask for it.
+          website. The quote form does not need it, and we do not ask for it.
         </p>
       </section>
 
@@ -119,7 +119,7 @@ export default function PrivacyPage() {
 
       <p className="rounded-lg bg-mist p-4 text-sm">
         Note: This policy is a plain-language starting point prepared before
-        launch. It should be reviewed — ideally with legal counsel — before the
+        launch. It should be reviewed, ideally with legal counsel, before the
         website goes live, and it is not a substitute for legal advice.
       </p>
     </LegalPageLayout>

@@ -54,7 +54,7 @@ export function ServiceAreaMap() {
         </text>
       </svg>
       <figcaption className="mt-4 text-center text-sm text-faint">
-        Illustration only — not a geographic map. Service availability is
+        Illustration only, not a geographic map. Service availability is
         confirmed during the walkthrough process.
       </figcaption>
     </figure>

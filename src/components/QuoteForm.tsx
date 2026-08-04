@@ -235,7 +235,7 @@ export function QuoteForm() {
           id="mainConcerns"
           name="mainConcerns"
           label="Main cleaning concerns"
-          hint="What matters most — restrooms, floors, dusting, consistency?"
+          hint="What matters most? Restrooms, floors, dusting, consistency."
           defaultValue={values.mainConcerns}
           error={errors.mainConcerns}
         />
